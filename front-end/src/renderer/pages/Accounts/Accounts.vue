@@ -312,11 +312,12 @@ onMounted(async () => {
 
             <div class="transition-bg rounded px-3" :class="{ 'bg-secondary': selectMany }">
               <AppButton
-                class="d-flex align-items-center text-dark-emphasis min-w-unset border-0 p-1"
+                class="d-flex align-items-center min-w-unset border-0 p-1"
+                :class="selectMany ? 'text-white' : 'text-dark-emphasis'"
                 data-testid="button-select-many-accounts"
                 @click="handleToggleSelectMode"
               >
-                <i class="bi bi-check-all text-headline me-2"></i> Select</AppButton
+                <i class="bi bi-check-all me-2" :class="selectMany ? '' : 'text-headline'"></i> Select</AppButton
               >
             </div>
           </div>
